@@ -1,14 +1,14 @@
 class Solution(object):
 
     def sortedSquares(self, nums):
-         array = []
-         for i in nums:
-             num = i * i
+         n = len(nums)
+         for i in range(0,n,1):
+             nums[i] = nums[i] * nums[i]
           
-             array.append(num)
+             
          
-         array.sort()
-         return array
+         nums.sort()
+         return nums
        
    
         
