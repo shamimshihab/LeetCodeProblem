@@ -13,38 +13,10 @@ class Solution:
                 l , r = l + 1, r-1
             
 
-        # if len(nums) == k :
-        #     return reverse(nums, 0 , len(nums)-1)
+   
 
         reverse(nums, 0 , len(nums)-1)
         reverse(nums, 0 , k-1)
         reverse(nums, k , len(nums) -1)
-
-        # l,r = 0, len(nums)-1
-
-        # while l < r :
-        #     nums[l], nums[r] = nums[r], nums[l]
-        #     l , r = l + 1, r-1
-        
-        # print(nums)
-
-        # l, r = 0 , k-1
-        # while l<r:
-        #     nums[l], nums[r] =  nums[r], nums[l]
-        #     l , r = l + 1, r-1
-        
-        
-        # print(nums)
-
-
-        # l, r = k , len(nums) -1
-
-        # while l<r :
-        #     nums[l], nums[r] =  nums[r], nums[l]
-        #     l , r = l + 1, r-1
-
-
-        print(nums)
-
 
      
