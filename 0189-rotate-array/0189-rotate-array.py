@@ -3,20 +3,21 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        k = k % len(nums)
+        R = k % len(nums)
+        roated = [0] * len(nums)
+
+        for i in range(len(nums)):
+            roated[(i+k)%len(nums)] = nums[i]
+
+        for i in range(len(nums)):
+            nums[i] = roated[i]
+
+        
 
 
-        def reverse(nums, l,r):
-            l , r = l , r
-            while l < r :
-                nums[l], nums[r] = nums[r], nums[l]
-                l , r = l + 1, r-1
+        
             
 
    
-
-        reverse(nums, 0 , len(nums)-1)
-        reverse(nums, 0 , k-1)
-        reverse(nums, k , len(nums) -1)
 
      
