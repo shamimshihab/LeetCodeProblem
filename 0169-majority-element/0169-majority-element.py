@@ -1,18 +1,28 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
+        h ={}
+        for i in nums:
+            if i not in h:
+                h[i] = 1
+            else:
+               h[i] = h[i] + 1
         
-        dict ={}
-
         
-
-        for x in nums:
-            dict[x] = dict.get(x,0) + 1
-
-        for s in dict:
-           if dict.get(s) > (len(nums)/2):
-            return s
-
-
-
+        
+        freq =  0
+        max = None
 
         
+
+        for j in h:
+            
+            if h[j] > freq:
+
+               
+                freq= h[j]
+                max = j
+
+        
+
+        return max
+
